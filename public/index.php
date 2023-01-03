@@ -5,13 +5,13 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 
 /* $app->group('/admin', function() use($app){  // Agrupando tipos de requisição na rota /admin/...
-    $app->get('/login', function(){  // requisição do tipo get na raiz
+    $app->get('/login', function(){
         echo "Hello World";
     });
 });
 
 $app->group('/site', function() use($app){  // Agrupando tipos de requisição na rota /admin/...
-    $app->get('/contato', function(){  // requisição do tipo get na raiz
+    $app->get('/contato', function(){
         echo "123";
     });
 }); */
