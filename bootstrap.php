@@ -1,10 +1,10 @@
 <?php
-require "vendor/autoload.php";
+require 'vendor/autoload.php';
 
-use Slim\App;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Slim\Factory\AppFactory;
 
-$config['displayErrorDetails'] = true;
-
-$app = new App(['settings' => $config]);
+$app = AppFactory::create();
 
 ?>

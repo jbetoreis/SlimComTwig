@@ -1,14 +1,14 @@
 {
-    
     "require": {
-        "slim/slim": "3.9",
-        "twig/twig": "^3.5"
+        "slim/slim": "^4.11",
+        "twig/twig": "^3.5",
+        "slim/psr7": "dev-master"
     },
-    "autoload":{
+    "autoload": {
         "psr-4": {
             "app\\":"app"
         },
-        "files":[
+        "files": [
             "app/functions/helpers.php"
         ]
     }

@@ -1,12 +1,13 @@
 <?php
 namespace app\controllers;
 
-use Slim\Http\Request;
-use Slim\Http\Response;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UserController{
     public function show(Request $request, Response $response, array $args){
         print_r($args);
+        return $response;
     }
 }
 
