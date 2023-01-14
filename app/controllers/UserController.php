@@ -9,6 +9,12 @@ class UserController{
         print_r($args);
         return $response;
     }
+
+    public function insert(Request $request, Response $response, array $args){
+        $parametros = $request->getParsedBody();
+        dd($parametros);
+        return $response;
+    }
 }
 
 ?>

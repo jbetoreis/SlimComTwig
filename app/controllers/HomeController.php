@@ -12,6 +12,10 @@ class HomeController extends Controller{
         ]);
         return $response;
     }
+    public function mensagem(Request $request, Response $response, array $args){
+        json(["msg" => "Olá Mundo"]);
+        return $response;
+    }
 }
 
 ?>

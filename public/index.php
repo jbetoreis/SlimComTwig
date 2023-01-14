@@ -17,9 +17,13 @@ $app->group('/site', function() use($app){  // Agrupando tipos de requisição n
 }); */
 
 
+
 $app->get('/', 'app\controllers\HomeController:index');
+$app->get('/msg', 'app\controllers\HomeController:mensagem');
+
 $app->get('/contato', 'app\controllers\ContatoController:index');
 $app->get('/user/show/{id}', app\controllers\UserController::class . ':show');
+$app->post('/user/insert', app\controllers\UserController::class . ':insert');
 
 $app->run();
 
