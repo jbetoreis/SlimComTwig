@@ -1,6 +1,7 @@
 <?php
 
 namespace app\traits;
+use app\src\Load;
 
 trait View
 {
@@ -16,7 +17,11 @@ trait View
     }
 
     protected function functions(){
+        $functions = Load::file("/app/functions/twig.php");
 
+        foreach($functions as $function){
+            $this->twig->addFunction($function);
+        }
     }
 
     protected function load(){
