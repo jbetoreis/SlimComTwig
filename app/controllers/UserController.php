@@ -12,7 +12,7 @@ class UserController{
 
     public function insert(Request $request, Response $response, array $args){
         $parametros = $request->getParsedBody();
-        dd($parametros);
+        json($parametros);
         return $response;
     }
 }
