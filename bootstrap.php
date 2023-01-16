@@ -6,5 +6,10 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
 
 $app = AppFactory::create();
+
+$app->addRoutingMiddleware();
+
+$app->addErrorMiddleware(true, true, true);
+
 $app->addBodyParsingMiddleware();
 ?>
