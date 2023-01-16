@@ -22,8 +22,8 @@ $app->group('/home', function (RouteCollectorProxy $group) {
     $group->get('/msg', 'app\controllers\HomeController:mensagem');
 });
 
-$app->group('/user', function (RouteCollectorProxy $group) {
-    $group->get('/show/{id}', app\controllers\UserController::class . ':show');
+$app->group('/users', function (RouteCollectorProxy $group) {
+    $group->get('/show', app\controllers\UserController::class . ':show');
     $group->post('/insert', app\controllers\UserController::class . ':insert');
 });
 
