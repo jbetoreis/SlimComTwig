@@ -2,7 +2,11 @@
     "require": {
         "slim/slim": "^4.11",
         "twig/twig": "^3.5",
-        "slim/psr7": "dev-master"
+        "slim/psr7": "dev-master",
+        "doctrine/orm": "2.14.1",
+        "doctrine/dbal": "^3.2",
+        "symfony/yaml": "^5.4",
+        "symfony/cache": "^5.4"
     },
     "autoload": {
         "psr-4": {

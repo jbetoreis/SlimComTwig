@@ -8,9 +8,7 @@ use app\models\User;
 
 class UserController extends Controller{
     public function show(Request $request, Response $response, array $args){
-        $user = new User;
-        $resultado = $user->all();
-        $this->view('users', ['title' => 'Página Users', 'usuarios' => $resultado]);
+        $this->view('users', ['title' => 'Página Users']);
         return $response;
     }
 
