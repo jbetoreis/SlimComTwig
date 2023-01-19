@@ -19,5 +19,35 @@
             </tr>
         </tbody>
     </table>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_cad_user">Cadastrar</button>
 </div>
+
+<div class="modal animated fadeIn" tabindex="-1" id="modal_cad_user">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="form_user">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cadastrar Usuário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Nome</label>
+                        <input type="text" name="user_nome" class="form-control" placeholder="Digite o nome">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">E-mail</label>
+                        <input type="text" name="user_email" class="form-control" placeholder="Digite o E-mail">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/user.js"></script>
 {% endblock %}

@@ -1,5 +1,6 @@
 <?php
 require "../bootstrap.php";  // Inicializando
+require "../app/src/bootstrap.php";  // DoctrineORM
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
