@@ -3,7 +3,7 @@ namespace app\controllers;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
-require "../app/src/bootstrap.php";
+use app\models\User;
 
 class UserController extends Controller{
     public function show(Request $request, Response $response, array $args){
@@ -12,12 +12,14 @@ class UserController extends Controller{
     }
 
     public function insert(Request $request, Response $response, array $args){
+        require path() . '/config/bootstrap.php';
+
         $parametros = $request->getParsedBody();
-        
-        /* $user->setNome($parametros->user_nome);
-        $user->setEmail($parametros->user_email);
+        $user = new User();
+        $user->setNome($parametros['user_nome']);
+        $user->setEmail($parametros['user_email']);
         $entityManager->persist($user);
-        $entityManager->flush(); */
+        $entityManager->flush();
         return $response;
     }
 }

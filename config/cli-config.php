@@ -2,7 +2,7 @@
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
 use Doctrine\ORM\Tools\Console\EntityManagerProvider\SingleManagerProvider;
 
-require __DIR__ . '/app/src/bootstrap.php';
+require path() . '/config/bootstrap.php';
 
 ConsoleRunner::run(
     new SingleManagerProvider($entityManager)

@@ -4,20 +4,21 @@ use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\ORMSetup;
 
+
 // Bootstrap Doctrine
 $config = ORMSetup::createAttributeMetadataConfiguration(
-    paths: array(__DIR__ . "/app/models/"),
+    paths: array(path() . "/app/models/"),
     isDevMode: true,
 );
 
 // configuring the database connection
 $connection = DriverManager::getConnection([
     'driver'         => 'pdo_pgsql',
-    'user'           => 'postgres',
-    'password'       => 'admin',
-    'host'           => 'localhost',
+    'user'           => 'beto',
+    'password'       => 'postgres',
+    'host'           => '10.4.3.151',
     'port'           => 5432,
-    'dbname'         => 'banco',
+    'dbname'         => 'beto',
     'charset'        => 'UTF-8',
 ], $config);
 
