@@ -24,6 +24,7 @@ $app->group('/home', function (RouteCollectorProxy $group) {
 });
 
 $app->group('/users', function (RouteCollectorProxy $group) {
+    $group->get('', app\controllers\UserController::class . ':index');
     $group->get('/show', app\controllers\UserController::class . ':show');
     $group->post('/insert', app\controllers\UserController::class . ':insert');
 });

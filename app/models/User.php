@@ -40,4 +40,8 @@ class User
     public function getEmail() : string{
         return $this->email;
     }
+
+    public function serialize(){
+        return get_object_vars($this);
+    }
 }

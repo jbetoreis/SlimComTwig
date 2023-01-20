@@ -14,11 +14,11 @@ $config = ORMSetup::createAttributeMetadataConfiguration(
 // configuring the database connection
 $connection = DriverManager::getConnection([
     'driver'         => 'pdo_pgsql',
-    'user'           => 'beto',
-    'password'       => 'postgres',
-    'host'           => '10.4.3.151',
+    'user'           => 'postgres',
+    'password'       => 'admin',
+    'host'           => 'localhost',
     'port'           => 5432,
-    'dbname'         => 'beto',
+    'dbname'         => 'banco',
     'charset'        => 'UTF-8',
 ], $config);
 
