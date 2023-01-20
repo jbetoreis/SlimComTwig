@@ -1,19 +1,21 @@
 <?php
 
-function dd($data){
+function dd($data)
+{
     echo "<pre>";
     print_r($data);
     die;
 }
 
-function json($data){
+function json($data)
+{
     header('Content-Type: application/json');
     echo json_encode($data);
 }
 
-function path(){
+function path()
+{
     $vendorDir = dirname(__DIR__);
     return dirname($vendorDir);
 }
 
-?>
