@@ -13,7 +13,10 @@ $(function () {
             if (response.status == 200) {
                 $('#form_edit_user')[0].reset();
                 $('#modal_edit_user').modal('hide');
+                toastr.success('Sucesso ao realizar a operação')
                 ListarUsuarios()
+            }else if(response.status == 404){
+                toastr.info('Registro não encontrado')
             }
         });
     })
@@ -39,11 +42,12 @@ $(function () {
             if (response.status == 200) {
                 $("#form_cad_user")[0].reset();
                 $('#modal_cad_user').modal('hide');
+                toastr.success('Sucesso ao realizar a operação')
                 let conteudo = '<tr>'
                 conteudo += '<td>' + response.data.id + '</td>'
                 conteudo += '<td>' + dados.user_nome + '</td>'
                 conteudo += '<td>' + dados.user_email + '</td>'
-                conteudo += '<td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_edit_user" id="' + valor.id_enc + '">Editar</button> <button class="btn btn-danger btn_del_user" id="' + valor.id_enc + '">Remover</button></td>';
+                conteudo += '<td><button class="btn btn-primary btn_edit_user" data-bs-toggle="modal" data-bs-target="#modal_edit_user" id="' + response.data.id_enc + '">Editar</button> <button class="btn btn-danger btn_del_user" id="' + response.data.id_enc + '">Remover</button></td>';
                 conteudo += '</tr>'
                 $("#listar_usuarios").append(conteudo)
             }
@@ -56,7 +60,10 @@ $(function () {
             let id = $(this).attr('id')
             axios.delete('/users/delete/' + id).then(function (response) {
                 if (response.status == 200) {
+                    toastr.success('Sucesso ao realizar a operação')
                     ListarUsuarios()
+                }else if(response.status == 404){
+                    toastr.info('Registro não encontrado')
                 }
             });
         }

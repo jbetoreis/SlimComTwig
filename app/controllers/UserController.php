@@ -43,7 +43,7 @@ class UserController extends Controller{
         $user->setEmail($parametros['user_email']);
         $entityManager->persist($user);
         $entityManager->flush();
-        return $this->response(['id' => $user->getId()], $response, 200);
+        return $this->response(['id' => $user->getId(), 'id_enc' => base64_encode($user->getId())], $response, 200);
     }
 
     public function update(Request $request, Response $response, array $args){
